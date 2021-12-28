@@ -1,12 +1,14 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
-    <head>
-        <title>Hello List!</title>
-    </head>
+  <head>
+    <title>Hello List!</title>
+  </head>
 
-    <body>
-        <h1>Hello List!</h1>
+  <body>
+    <h1>Hello List!</h1>
 
-        <ul>
-    </body>
+    <ul>
+      {% for item in items %} {{item}} {% endfor %}
+    </ul>
+  </body>
 </html>

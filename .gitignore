@@ -1,7 +1,8 @@
 other/
 sanity.py
-
+**/.tmc*.json
 **/__pycache__/
+**/.vscode
 
 # Byte-compiled / optimized / DLL files
 __pycache__/

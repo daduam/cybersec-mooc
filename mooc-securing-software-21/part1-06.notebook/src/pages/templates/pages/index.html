@@ -1,22 +1,29 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
-    <head>
-        <title>Hello Notes!</title>
-    </head>
+  <head>
+    <title>Hello Notes!</title>
+  </head>
 
-    <body>
-        <h1>Hello Notes!</h1>
+  <body>
+    <h1>Hello Notes!</h1>
 
-        <ul>
-		</ul>
+    <ul>
+      {% for item in items %}
+      <li>{{item}}</li>
+      {% endfor %}
+    </ul>
 
+    <h2>Add content to list</h2>
+    <form action="/add" method="POST">
+      {% csrf_token %}
+      <input type="text" name="content" required />
+      <input type="submit" value="Add" />
+    </form>
 
-
-        <h2>Add content to list</h2>
-
-
-        <h2>Clear everything</h2>
-
-
-    </body>
+    <h2>Clear everything</h2>
+    <form action="/erase" method="POST">
+      {% csrf_token %}
+      <input type="submit" value="Clear everything" />
+    </form>
+  </body>
 </html>
