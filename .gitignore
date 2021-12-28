@@ -1,2 +1,4 @@
 other/
 sanity.py
+
+*/**/__pycache__/
